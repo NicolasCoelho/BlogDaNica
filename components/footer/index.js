@@ -6,12 +6,12 @@ export default function Footer() {
                 <form className="md:max-w-[700px] m-auto">
                     <div className="flex space-between w-full gap-x-20 flex-col md:flex-row py-8 sm:py-16">
                         <div className="inline-block text-left w-full md:w-1/2 my-2">
-                            <label className="w-full">Nome</label>
-                            <input required></input>
+                            <label className="w-full" htmlFor="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" required></input>
                         </div>
                         <div className="inline-block text-left w-full md:w-1/2 my-2">
-                            <label className="w-full">E-Mail</label>
-                            <input type="email" required></input>
+                            <label className="w-full" htmlFor="email">E-Mail</label>
+                            <input type="email" id="email" name="email" required></input>
                         </div>
                     </div>
                     <button type="submit" className="secodary">Enviar</button>

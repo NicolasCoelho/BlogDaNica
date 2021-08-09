@@ -5,7 +5,7 @@ import Footer from '../components/footer'
 import ImageCard from '../components/image-card'
 import Link from 'next/link'
 
-export default function Planos() {
+export default function Servicos() {
   return (
     <>
       <Head>
@@ -21,7 +21,7 @@ export default function Planos() {
             <Image
                 src="/images/cabides.jpg"
                 alt="Por que"
-                quality="100"
+                quality="70"
                 layout="fill"
                 objectFit="cover"
             />
@@ -101,4 +101,8 @@ export default function Planos() {
       <Footer/>
     </>
   )
+}
+
+export async function getServerSideProps() {
+    
 }

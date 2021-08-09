@@ -23,7 +23,7 @@ export default function Home({ posts }) {
             <Image
               src="/images/closet2.jpg"
               alt="Guarda-Roupas"
-              quality="100"
+              quality="70"
               layout="fill"
               objectFit="cover"
             />
@@ -32,7 +32,7 @@ export default function Home({ posts }) {
             <Image
               src="/images/closet10.jpg"
               alt="Closet"
-              quality="100"
+              quality="70"
               layout="fill"
               objectFit="cover"
             />
@@ -41,7 +41,7 @@ export default function Home({ posts }) {
             <Image
               src="/images/room4.jpg"
               alt="Cozinha"
-              quality="100"
+              quality="70"
               layout="fill"
               objectFit="cover"
             />
@@ -64,7 +64,7 @@ export default function Home({ posts }) {
               <Image
                 src="/images/why.jpg"
                 alt="Por que"
-                quality="100"
+                quality="70"
                 layout="fill"
                 objectFit="cover"
               />
@@ -83,7 +83,7 @@ export default function Home({ posts }) {
             <Image
               src="/images/me.jpg"
               alt="Por que"
-              quality="100"
+              quality="70"
               layout="fill"
               objectFit="cover"
             />

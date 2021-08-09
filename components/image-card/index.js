@@ -19,7 +19,7 @@ export default function ImageCard({...props}) {
             <Image
                 src={props.image}
                 alt="Por que"
-                quality="100"
+                quality="70"
                 layout="fill"
                 objectFit="cover"
             />      
