@@ -50,6 +50,9 @@ form textarea {
             @apply 
             block text-center
         }
+        .plan-card .price {
+            font-family: "sans-serif";
+        }
 
 .button {
     @apply p-3 w-full bg-primary
@@ -69,4 +72,31 @@ form textarea {
     .image-grid > li:hover .content .desc {
         @apply block
     }
-    
+
+.instagram {
+    margin: 10px 0px;
+}
+
+#instafeed {
+    display: flex;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+#instafeed a {
+    display: flex;
+    width: 48%;
+}
+
+#instafeed a img {
+    width: 100%;
+    object-fit: cover;
+}
+
+@media(max-width: 768px) {
+    #instafeed {
+        flex-wrap: wrap;
+        column-gap: 0px;
+        justify-content: space-between;
+    }
+}

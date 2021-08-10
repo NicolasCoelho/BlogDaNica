@@ -17,6 +17,7 @@ module.exports = {
     },
     fontFamily: {
       'sans': ['Raleway', 'serif', 'system-ui'],
+      'serif': ['sans-serif', 'system-ui'],
       'play': ['Playfair Display', 'serif', 'system-ui']
      }
   },

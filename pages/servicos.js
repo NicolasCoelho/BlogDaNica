@@ -44,54 +44,54 @@ export default function Servicos() {
                 <div className="text-center">
                     <span className="text-sm">A partir de</span>
                     <br></br>
-                    <strong className="text-2xl">R$ 280,00</strong>
+                    <span className="text-2xl price">R$ 499,00</span>
                 </div>
                 <ul>
-                    <span>Itens Inclusos</span>
-                    <li>Organizaçao basica</li>
-                    <li>Ajuste de armarios</li>
-                    <li>Cozinha</li>
-                    <li>Quartos</li>
-                    <li>Biblioteca ate 2009 livros</li>
-                    <li>etc</li>
+                    <span>Resumo</span>
+                    <li>Organização menor e menos complexa</li>
+                    <li>Ajuda operacional</li>
+                    <li>Ajustar das técnicas às suas necessidades</li>
+                    <li>Experiência mais econômica</li>
+                    <li>Exemplo: Organização de armários</li>
+                    <li>Necessário visita técnica</li>
                 </ul>
                 <Link href="/contato"><a className="button text-center text-white">Eu quero</a></Link>
                 <span className="text-xs">* Preço de referência. O valor final pode alterar de acordo com o projeto</span>
             </article>
             <article className="plan-card">
-                <h3>Plano 1</h3>
+                <h3>Plano 2</h3>
                 <div className="text-center">
                     <span className="text-sm">A partir de</span>
                     <br></br>
-                    <strong className="text-2xl">R$ 280,00</strong>
+                    <span className="text-2xl price">R$ 899,00</span>
                 </div>
                 <ul>
-                    <span>Itens Inclusos</span>
-                    <li>Organizaçao basica</li>
-                    <li>Ajuste de armarios</li>
-                    <li>Cozinha</li>
-                    <li>Quartos</li>
-                    <li>Biblioteca ate 2009 livros</li>
-                    <li>etc</li>
+                    <span>Resumo</span>
+                    <li>Organização de um espaço completo</li>
+                    <li>Adequação de produtos organizadores</li>
+                    <li>Treinamento da pessoa responsável</li>
+                    <li>Inclui kit de gabaritos para as dobras</li>
+                    <li>Ambiante a escolha do cliente</li>
+                    <li>Necessário visita técnica</li>
                 </ul>
                 <Link href="/contato"><a className="button text-center text-white">Eu quero</a></Link>
                 <span className="text-xs">* Preço de referência. O valor final pode alterar de acordo com o projeto</span>
             </article>
             <article className="plan-card">
-                <h3>Plano 1</h3>
+                <h3>Plano 3</h3>
                 <div className="text-center">
                     <span className="text-sm">A partir de</span>
                     <br></br>
-                    <strong className="text-2xl">R$ 280,00</strong>
+                    <span className="text-2xl price">R$ 1.799,00</span>
                 </div>
                 <ul>
-                    <span>Itens Inclusos</span>
-                    <li>Organizaçao basica</li>
-                    <li>Ajuste de armarios</li>
-                    <li>Cozinha</li>
-                    <li>Quartos</li>
-                    <li>Biblioteca ate 2009 livros</li>
-                    <li>etc</li>
+                    <span>Resumo</span>
+                    <li>Organização de dois ou mais espaços</li>
+                    <li>Todos os itens dos planos anteriores</li>
+                    <li>Planejamento completo</li>
+                    <li>Execução dedicada</li>
+                    <li>Visita de manutenção</li>
+                    <li>Necessário visita técnica</li>
                 </ul>
                 <Link href="/contato"><a className="button text-center text-white">Eu quero</a></Link>
                 <span className="text-xs">* Preço de referência. O valor final pode alterar de acordo com o projeto</span>

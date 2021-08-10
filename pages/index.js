@@ -3,18 +3,21 @@ import Image from 'next/image'
 import Header from '../components/header'
 import Footer from '../components/footer'
 import Card from '../components/card'
+import Script from 'next/script'
 
 import { connectToDatabase } from '../util/mongodb'
+
+export default function Home({ posts }) {
 
   function top() {
     window.scrollTo(0,0);
   }
-
-export default function Home({ posts }) {
+  
   return (
     <>
       <Head>
         <title>Dicuore Organiza | Nicole Coelho</title>
+        <script src="/js/instafeed.js"></script>
       </Head>
       <Header/>
       <main>
@@ -85,7 +88,7 @@ export default function Home({ posts }) {
         </section>
         <section className="container m-auto text-center">
           <h2 className="text-4xl">Prazer, Nicole</h2>
-          <div className="flex flex-wrap justify-around my-10"> 
+          <div className="flex flex-wrap justify-around py-10"> 
             <div className="relative inline-block h-[300px] lg:h-[500px] w-full md:w-[40%] xl:w-[500px] border border-2 border-primary overflow-hidden">
               <Image
                 src="/images/me.jpg"
@@ -119,8 +122,21 @@ export default function Home({ posts }) {
             </div>
           </div>
         </section>
+        <section className="container m-auto">
+          <div className="instagram">
+            <h4> <a className="text-2xl font-play text-primary" href="https://www.instagram.com/dicuoreorganiza/" target="_BLANK" rel="noopener noreferrer"><i className="fab fa-instagram text-primary text-2xl"></i>&nbsp;DicuoreOrganiza</a></h4>	
+            <div id="instafeed"></div>
+          </div>
+          <Script strategy="lazyOnload">
+            {`var feed = new Instafeed({
+            accessToken: 'IGQVJVUkJ6V3FkR1lGMzE4YldrcUtPT25PRHoybjhaZAGJOMTB3ZAEFrQ1BkZAU1TYUY4TmJ2RXJDUGFPckp1NjNGQjgzc0FKMWVYTDVZAVU5RRV9sQWhwaXg4cW5pXzZACTGxrb1dSUVp6SVhtMFpiQzBqSAZDZD',
+            limit: 4
+            });
+            feed.run();`}
+          </Script>
+        </section>
         <section className="w-full text-center my-16">
-          <button className="text-lg" onClick={top}>Voltar ao topo</button>
+          <button className="text-lg" onClick={top}>Voltar ao topo <i className="fas fa-chevron-up"></i></button>
         </section>
       </main>
       <Footer/>
