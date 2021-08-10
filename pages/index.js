@@ -14,7 +14,7 @@ export default function Home({ posts }) {
   return (
     <>
       <Head>
-        <title>Dicuore Organizza | Nicole Coelho</title>
+        <title>Dicuore Organiza | Nicole Coelho</title>
       </Head>
       <Header/>
       <main>
@@ -70,45 +70,53 @@ export default function Home({ posts }) {
               />
             </div>
             <p className="py-4">
-              Lorem impsu shuae kso oiajs Lorem impsu shuae kso oiajs Lorem impsu shuae kso oiajs Lorem impsu shuae kso oiajs Lorem impsu shuae kso oiajs Lorem impsu shuae kso oiajs 
+              Aqui você encontrará matérias com dicas práticas que podem mudar a rotina do seu lar para melhor. 
             </p>
             <p className="py-4">
-              Lorem impsu shuae kso oiajs Lorem impsu shuae kso oiajs Lorem impsu shuae kso oiajs Lorem impsu shuae kso oiajs Lorem impsu shuae kso oiajs Lorem impsu shuae kso oiajs 
+              Ainda, você vai poder acompanhar os resultados do meu trabalho de perto e se informar sobre meus serviços e qual tipo de transformação combina mais com você na etapa da vida que estiver.
+            </p>
+            <p className="py-4">
+              Navegando no site, você terá acesso a ótimas indicações de produtos organizadores que farão a diferença no seu armário, closet, banheiro, cozinha, e escritório. 
+            </p>
+            <p className="py-4">
+              Espero que sua experiência por aqui seja enriquecedora. <br></br> <b>Sinta-se em casa!</b>
             </p>
           </article>
         </section>
         <section className="container m-auto text-center">
           <h2 className="text-4xl">Prazer, Nicole</h2>
-          <div className="relative inline-block my-10 h-[400px] w-[400px] border border-4 border-primary rounded-full overflow-hidden">
-            <Image
-              src="/images/me.jpg"
-              alt="Por que"
-              quality="70"
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
-          <div className="max-w-[800px] m-auto">
-            <p className="text-lg">Olá, meu nome é Nicole Coelho e sou apaixonada por esse mundo da organização!</p>
-            <p className="text-lg">
-              Meu amor por ajudar as pessoas e por organização me fez chegar até aqui como personal organizer. 
-            </p>
-            <br></br>
-            <p className="text-lg">
-              Unir essas duas coisas me fez e me faz estudar a cada dia para ajudar as pessoas. 
+          <div className="flex flex-wrap justify-around my-10"> 
+            <div className="relative inline-block h-[300px] lg:h-[500px] w-full md:w-[40%] xl:w-[500px] border border-2 border-primary overflow-hidden">
+              <Image
+                src="/images/me.jpg"
+                alt="Por que"
+                quality="70"
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>  
+            <div className="w-full my-10 md:my-0 md:w-[40%] xl:w-[500px] text-left">
+              <p className="text-lg">Olá, meu nome é Nicole Coelho e sou apaixonada por esse mundo da organização!</p>
+              <p className="text-lg">
+                Meu amor por ajudar as pessoas e por organização me fez chegar até aqui como personal organizer. 
+              </p>
               <br></br>
-              Por isso, busquei qualificação profissional. 
-            </p>
-            <p className="text-lg">
-              Hoje, posso dizer que sou Personal organizer qualificada e certificada pela OZ!
+              <p className="text-lg">
+                Unir essas duas coisas me fez e me faz estudar a cada dia para ajudar as pessoas. 
+                <br></br>
+                Por isso, busquei qualificação profissional. 
+              </p>
+              <p className="text-lg">
+                Hoje, posso dizer que sou Personal organizer qualificada e certificada pela OZ!
+                <br></br>
+                Organize sua vida. 
+              </p>
               <br></br>
-              Organize sua vida. 
-            </p>
-            <br></br>
-            <p className="text-lg">
-              Especializada em Organização residencial, mudanças residenciais, treinamento de empregadas e organização de Home office,
-              minha missão é ajudar as pessoas a otimizar seus espaços por dar soluções práticas a elas.
-            </p>
+              <p className="text-lg">
+                Especializada em Organização residencial, mudanças residenciais, treinamento de empregadas e organização de Home office,
+                minha missão é ajudar as pessoas a otimizar seus espaços por dar soluções práticas a elas.
+              </p>
+            </div>
           </div>
         </section>
         <section className="w-full text-center my-16">

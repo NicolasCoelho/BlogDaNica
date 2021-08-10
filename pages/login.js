@@ -1,17 +1,30 @@
 import Head from "next/head";
 
+import session from '../util/session';
+
 export default function Login({props}) {
-    function login(e) {
+    async function login(e) {
         e.preventDefault();
         const user = e.target.querySelector('#user').value
         const password = e.target.querySelector('#password').value
 
-        const body = {
+        const payload = {
             user,
             password
         }
-        console.log(body)
-        //TODO: Fetch api login route and redirect to admin if is ok
+        let response = await fetch('/api/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        })
+
+        response = await response.json()
+        console.log(response)
+        if (response.success) {
+            window.location = '/admin'
+        } else {
+            document.querySelector('#err').style.display = 'block'
+        }
     }
     
     return (
@@ -32,7 +45,25 @@ export default function Login({props}) {
                     </div>
                     <button type="submit" className="primary text-white">Entrar</button>
                 </form>
+                <span className="font-sans text-primary my-10" style={{ display: 'none' }} id="err">Usuário ou senha invalidos</span>
             </main>
         </>
     )
 }
+
+export const getServerSideProps = session(async ({req, res}) => {
+    const user = req.session.get('user')
+  
+    if (user) {
+      return {
+        redirect: {
+          destination: '/admin',
+          permanent: false,
+        }
+      }
+    }
+  
+    return {
+      props: { user }
+    }
+  })

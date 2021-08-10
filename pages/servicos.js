@@ -9,7 +9,7 @@ export default function Servicos() {
   return (
     <>
       <Head>
-        <title>Serviços | Dicuore Organizza</title>
+        <title>Serviços | Dicuore Organiza</title>
       </Head>
       <Header/>
       <main>

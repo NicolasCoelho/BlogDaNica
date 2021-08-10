@@ -6,7 +6,7 @@ export default function Contato({ isConnected }) {
     return (
         <>
             <Head>
-                <title>Contato | Dicuore Organizza</title>
+                <title>Contato | Dicuore Organiza</title>
             </Head>
             <Header/>
             <main className="text-center container m-auto">
