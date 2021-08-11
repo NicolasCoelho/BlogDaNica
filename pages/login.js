@@ -19,7 +19,6 @@ export default function Login() {
         })
 
         response = await response.json()
-        console.log(response)
         if (response.success) {
             window.location = '/admin'
         } else {
