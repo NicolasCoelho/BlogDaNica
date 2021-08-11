@@ -9,18 +9,17 @@ export default session(async (req, res) => {
 
     const users = await db.collection('users').find({user, password}).toArray();
 
-    res.status(200).json(users);
-
-    /*
     if(users.length > 0) {
       const user = { name: 'Nicole', isLoggedIn: true}
-      req.session.set('user', user)
-      await req.session.save()
+      
+        req.session.set('user', user)
+      /*
+        await req.session.save()
+      */
       res.status(200).json({success: true})
     } else {
       res.status(401).json({ success: false, e: "Usuário ou senha incorretos" })
     }
-    */
   } catch (err) {
     res.status(500).json(err)
   }
