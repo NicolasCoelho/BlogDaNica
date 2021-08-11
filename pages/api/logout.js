@@ -6,7 +6,7 @@ export default session(async (req, res) => {
       if (user) {
         req.session.destroy()
       }
-      res.status(200).redirect('/')
+      res.status(307).redirect('/')
   } catch (err) {
     res.status(500).json(err)
   }

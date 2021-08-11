@@ -12,10 +12,13 @@ export default session(async (req, res) => {
     if(users.length > 0) {
       const user = { name: 'Nicole', isLoggedIn: true}
       
-        req.session.set('user', user)
-      /*
-        await req.session.save()
-      */
+        
+        try {
+          await req.session.set('user', user)
+          await req.session.save() 
+        } catch (error) {
+          res.status(200).json({success: false, err: error})
+        }
       res.status(200).json({success: true})
     } else {
       res.status(401).json({ success: false, e: "Usuário ou senha incorretos" })
