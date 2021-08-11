@@ -2,7 +2,7 @@ import session from '../../util/session'
 
 export default session(async (req, res) => {
   try {
-    const { user, password } = await req.body 
+    const { user, password } = await req.body
     if (user === process.env.USER && password === process.env.USER_PASSWORD) {
       const user = { name: 'Nicole', isLoggedIn: true}
       req.session.set('user', user)

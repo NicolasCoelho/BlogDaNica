@@ -12,7 +12,7 @@ export default function Home({ posts }) {
   function top() {
     window.scrollTo(0,0);
   }
-  
+
   return (
     <>
       <Head>

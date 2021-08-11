@@ -2,11 +2,11 @@ import { connectToDatabase } from '../../util/mongodb';
 
 export default async (req, res) => {
   try {
-    const { name, email } = await req.body
+    const { email } = await req.body
 
     const { db } = await connectToDatabase()
 
-    await db.collection('newsletter').insert({name, email, createdAt: new Date().toISOString()})
+    const find = await db.collection('newsletter').find({email}).toArray();
 
     res.status(200).json({success: true})
   } catch (err) {

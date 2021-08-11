@@ -2,7 +2,7 @@ import Head from "next/head";
 
 import session from '../util/session';
 
-export default function Login({props}) {
+export default function Login() {
     async function login(e) {
         e.preventDefault();
         const user = e.target.querySelector('#user').value
@@ -64,6 +64,6 @@ export const getServerSideProps = session(async ({req, res}) => {
     }
   
     return {
-      props: { user }
+      props: {}
     }
   })

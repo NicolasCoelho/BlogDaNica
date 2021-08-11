@@ -8,7 +8,9 @@ export default function Admin() {
                 <title>Adminstrador</title>
             </Head>
             <div className="container m-auto">
-
+              <form method="POST" action="/api/logout">
+                <button type="submit" className="bg-primary text-white">Sair</button>
+              </form>
             </div>
         </>
     )
