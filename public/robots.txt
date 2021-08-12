@@ -1,0 +1,6 @@
+Sitemap: https://www.dicuoreorganiza.com.br/api/sitemap
+
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /login
