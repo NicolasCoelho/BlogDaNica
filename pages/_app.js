@@ -10,9 +10,10 @@ export default function MyApp({ Component, pageProps }) {
         <meta name="keywords" content="Organização, Organizer, Personal"></meta>
         <meta httpEquiv="content-language" content="pt-br"></meta>
         <meta httpEquiv="content-type" content="text/html; charset=UTF-8"></meta>
+        <meta name="theme-color" content="#b37dac"></meta>
         <meta name="creator" content="nck"></meta>
         <meta name="robots" content="index"></meta>
-        <link rel="canonical" href="https://www.dicuoreorganizer.com.br"></link>  
+        <link rel="canonical" href="https://www.dicuoreorganiza.com.br"></link>  
       </Head>
       <Component {...pageProps} />
     </>

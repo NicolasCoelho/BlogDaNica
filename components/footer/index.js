@@ -39,15 +39,15 @@ export default function Footer() {
                 <form className="md:max-w-[700px] m-auto" onSubmit={sendNewsletter}>
                     <div className="flex space-between w-full gap-x-20 flex-col md:flex-row py-8 sm:py-16">
                         <div className="inline-block text-left w-full md:w-1/2 my-2">
-                            <label className="w-full" htmlFor="name">Nome Completo</label>
+                            <label className="w-full font-bold" htmlFor="name">Nome Completo</label>
                             <input type="text" id="name" name="name" required minLength="4" maxLength="50"></input>
                         </div>
                         <div className="inline-block text-left w-full md:w-1/2 my-2">
-                            <label className="w-full" htmlFor="email">E-Mail</label>
+                            <label className="w-full font-bold" htmlFor="email">E-Mail</label>
                             <input type="email" id="email" name="email" required minLength="6" maxLength="50"></input>
                         </div>
                     </div>
-                    <button type="submit" className="secodary">Enviar</button>
+                    <button type="submit" className="secodary font-bold">Enviar</button>
                     <div className="w-full text-center text-white py-2">
                         <span id="result"></span>
                     </div>
