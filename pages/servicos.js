@@ -102,9 +102,3 @@ export default function Servicos() {
     </>
   )
 }
-
-export async function getServerSideProps() {
-    return {
-        props: {}
-    }
-}

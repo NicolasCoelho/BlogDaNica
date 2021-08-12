@@ -111,9 +111,3 @@ export default function Contato() {
         </>
     )
 }
-
-export async function getServerSideProps() {
-    return {
-        props: {}
-    }
-}

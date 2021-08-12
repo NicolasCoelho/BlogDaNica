@@ -55,8 +55,8 @@ export default function Home({ posts }) {
         </section>
         <section className="container m-auto sm:my-28 flex-col-reverse md:flex-row flex justify-around flex-wrap gap-x-4 gap-y-4">
           <div className="flex justify-between flex-col gap-y-4 mb-4 lg:m-0">
-          {posts.map((post) => (
-            <Card {...post}/>
+          {posts.map((post, i) => (
+            <Card {...post} key={`card-${i}`}/>
           ))}
           </div>
           <article className="w-full lg:w-[550px] border border-gray-300 px-4 py-4 md:px-12 m:py-8 text-justify">
@@ -144,12 +144,12 @@ export default function Home({ posts }) {
   )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const { db } = await connectToDatabase()
 
   let posts = await db
   .collection("posts")
-  .find({})
+  .aggregate({$project: { title: 1, url: 1, resume: 1, createdAt: 1, thumbnail: 1 }})
   .sort({ metacritic: -1 })
   .limit(2)
   .toArray()

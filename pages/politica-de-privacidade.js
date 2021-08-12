@@ -51,10 +51,3 @@ export default function PoliticaDePrivacidade() {
         </>
     )
 }
-
-export async function getServerSideProps() {
-    return {
-      props: {}
-    }
-  }
-  

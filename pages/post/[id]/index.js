@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router'
 import Header from '../../../components/header';
 import Footer from '../../../components/footer';
 
@@ -8,6 +9,31 @@ import formatDate from '../../../util/formatDate';
 export default function Post(props) {
 
     const baseUrl = "https://www.dicuoreorganiza.com.br"
+
+    const router = useRouter()
+
+    if (router.isFallback) {
+      return <div>Loading...</div>
+    }
+
+    function copyLink(e) {
+        e.preventDefault();
+        let input = document.createElement('INPUT')
+        let text = e.target.parentNode.getAttribute('href')
+        e.target.parentNode.setAttribute('title', 'Copiado!')
+        if (!text) {
+            text = e.target.getAttribute('href')
+        }
+        input.setAttribute('value', text)
+        input.setAttribute('id', 'clipboardText')
+        e.target.parentNode.appendChild(input)
+        input.style.position = "absolute"
+        input.style.left = '-10000px'
+        document.querySelector('#clipboardText').focus()
+        document.querySelector('#clipboardText').setSelectionRange(0, 99999)
+        document.execCommand('copy')
+        document.querySelector('#clipboardText').remove()
+    }
 
     return (
         <>
@@ -25,7 +51,7 @@ export default function Post(props) {
                             <span>Share</span>
                             <ul className="flex md:block justify-around">
                                 <li className="py-2">
-                                    <a href={`https://www.facebook.com/sharer/sharer.php?u=${baseUrl}/posts/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Copiar Link">
+                                    <a href={`https://www.facebook.com/sharer/sharer.php?u=${baseUrl}/posts/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Copiar Link" onClick={copyLink}>
                                         <i className="fas fa-link hover:text-primary"></i>
                                     </a>
                                 </li>
@@ -96,17 +122,32 @@ export default function Post(props) {
     )
 }
 
-export async function getServerSideProps({query}) {
-    const { id } = query
+export async function getStaticPaths() {
+    
+    const { db } = await connectToDatabase()
+
+    const posts = await db.collection('posts').aggregate([{$project: { url:1 }}]).toArray();
+
+    const paths = posts.map((post) => ({
+        params: { id: post.url }
+    }))
+
+    return { paths, fallback: true }
+}
+
+export async function getStaticProps({params}) {
+
+    const { id } = params
 
     const { db } = await connectToDatabase()
 
     const post = await db.collection('posts').findOne({url: id})
     post._id = `${post['_id']}`
+
     return {
         props: {
             ...post
-        }
+        },
+        revalidate: 3200
     }
-    
 }
