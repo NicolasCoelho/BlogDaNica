@@ -33,7 +33,7 @@ export default function PoliticaDePrivacidade() {
                     </ul>
                     <p><br></br></p>
                     <h2>Consentimento ou Bloqueio de Cookies</h2>
-                    <p>Para que os recursos de coleta de dados em nosso site funcione adequadamente &eacute; necess&aacute;rio o uso de cookies (pequenos arquivos de texto que podem definir prefer&ecirc;ncias). Os cookies n&atilde;o s&atilde;o programas, n&atilde;o roubam dados de seu computador e n&atilde;o colocam a sua navega&ccedil;&atilde;o em risco, no entanto, &eacute; de seu direito bloquear nossos cookies caso queira. Para saber como proceder, <a href="como-desativar-cookies-e-outros-rastreadores-em-seu-navegador/">acesse este tutorial passo a passo</a>.</p>
+                    <p>Para que os recursos de coleta de dados em nosso site funcione adequadamente &eacute; necess&aacute;rio o uso de cookies (pequenos arquivos de texto que podem definir prefer&ecirc;ncias). Os cookies n&atilde;o s&atilde;o programas, n&atilde;o roubam dados de seu computador e n&atilde;o colocam a sua navega&ccedil;&atilde;o em risco, no entanto, &eacute; de seu direito bloquear nossos cookies caso queira. Para saber como proceder, pesquise externamente ou entre e em contato conosco.</p>
                     <p><br></br></p>
                     <h2>Seus Direitos</h2>
                     <p>Voc&ecirc; tem os seguintes direitos:</p>

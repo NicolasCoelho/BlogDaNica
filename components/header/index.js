@@ -22,7 +22,7 @@ export default function Header() {
                 <nav id='menu' className="fixed transition-all duration-300 z-50 h-full bg-primary top-[112px] right-[-100%] md:h-auto md:top-0 md:bg-transparent md:sticky w-full md:w-3/6 lg:w-2/6">
                     <ul className="flex flex-col w-full justify-between justify-items-center gap-y-10 font-semibold text-lg md:text-md md:flex-row my-10">
                         <li className="text-center md:text-left"><Link href="/servicos"><a onClick={closeMenu} className="text-white md:text-black md:hover:text-primary">Serviços</a></Link></li>
-                        <li className="text-center md:text-left"><Link href="/dicas"><a onClick={closeMenu} className="text-white md:text-black md:hover:text-primary">Dicas</a></Link></li>
+                        <li className="text-center md:text-left"><Link href="/posts"><a onClick={closeMenu} className="text-white md:text-black md:hover:text-primary">Posts</a></Link></li>
                         <li className="text-center md:text-left"><Link href="/produtos"><a onClick={closeMenu} className="text-white md:text-black md:hover:text-primary">Produtos</a></Link></li>
                         <li className="text-center md:text-left"><Link href="/contato"><a onClick={closeMenu} className="text-white md:text-black md:hover:text-primary">Contato</a></Link></li>
                     </ul>
