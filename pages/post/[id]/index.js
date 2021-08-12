@@ -25,27 +25,27 @@ export default function Post(props) {
                             <span>Share</span>
                             <ul className="flex md:block justify-around">
                                 <li className="py-2">
-                                    <a href={`https://www.facebook.com/sharer/sharer.php?u=${baseUrl}/posts/${props._id}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Copiar Link">
+                                    <a href={`https://www.facebook.com/sharer/sharer.php?u=${baseUrl}/posts/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Copiar Link">
                                         <i className="fas fa-link hover:text-primary"></i>
                                     </a>
                                 </li>
                                 <li className="py-2">
-                                    <a href={`https://www.facebook.com/sharer/sharer.php?u=${baseUrl}/posts/${props._id}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Facebook">
+                                    <a href={`https://www.facebook.com/sharer/sharer.php?u=${baseUrl}/posts/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Facebook">
                                         <i className="fab fa-facebook-f hover:text-primary"></i>
                                     </a>
                                 </li>
                                 <li className="py-2">
-                                    <a href={`https://twitter.com/intent/tweet?text=${props.title}&url=${baseUrl}/posts/${props._id}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Twitter">
+                                    <a href={`https://twitter.com/intent/tweet?text=${props.title}&url=${baseUrl}/posts/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Twitter">
                                         <i className="fab fa-twitter hover:text-primary"></i>
                                     </a>
                                 </li>
                                 <li className="py-2">
-                                    <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${baseUrl}/posts/${props._id}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Twitter">
+                                    <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${baseUrl}/posts/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Twitter">
                                         <i className="fab fa-linkedin-in hover:text-primary"></i>
                                     </a>
                                 </li>
                                 <li className="py-2">
-                                    <a href={`mailto:?subject=${props.title}&body=Article:%20${baseUrl}/posts/${props._id}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="E-mail"> 
+                                    <a href={`mailto:?subject=${props.title}&body=Article:%20${baseUrl}/posts/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="E-mail"> 
                                         <i className="far fa-envelope hover:text-primary"></i>
                                     </a>
                                 </li>
