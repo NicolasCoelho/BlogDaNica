@@ -10,6 +10,7 @@ export default function Servicos() {
     <>
       <Head>
         <title>Serviços | Dicuore Organiza</title>
+        <meta name="description" content="Serviços de Personal Organizer com preços flexíveis e práticos."></meta>
       </Head>
       <Header/>
       <main>
