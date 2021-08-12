@@ -1,4 +1,5 @@
 import Header from "../../../components/header/admin";
+import session from '../../../util/session';
 
 export default function CreatePost() {
 
@@ -70,3 +71,20 @@ export default function CreatePost() {
         </>
     )
 }
+
+export const getServerSideProps = session(async ({req, res}) => {
+    const user = req.session.get('user')
+  
+    if (!user) {
+      return {
+        redirect: {
+          destination: '/login',
+          permanent: false,
+        }
+      }
+    }
+  
+    return {
+      props: { user }
+    }
+  })

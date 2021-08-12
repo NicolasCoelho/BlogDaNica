@@ -3,3 +3,10 @@ export default function Posts() {
         <></>
     )
 }
+
+export async function getServerSideProps() {
+    return {
+      props: {}
+    }
+  }
+  

@@ -1,9 +1,16 @@
 import { connectToDatabase } from '../../../util/mongodb';
+import session from '../../../util/session';
 
 import Post from '../../../models/post';
 
-export default async (req, res) => {
+export default session(async (req, res) => {
   try {
+    const user = await req.session.get('user')
+
+    if(!user) {
+      res.status(307).redirect('/login')
+    }
+
     const { db } = await connectToDatabase()
  
     const post = new Post( ...Object.values(await req.body) )
@@ -15,4 +22,4 @@ export default async (req, res) => {
       console.log(err)
     res.status(500).json(err)
   }
-}
+})
