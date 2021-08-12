@@ -37,7 +37,7 @@ form textarea {
 }
 
 .shadow-bg {
-    @apply absolute w-full h-full bg-black z-10 opacity-60
+    @apply absolute w-full h-full bg-black z-10 opacity-40
 }
 
 .plan-card {
@@ -50,8 +50,7 @@ form textarea {
         @apply list-decimal list-inside
     }
         .plan-card ul span {
-            @apply 
-            block text-center
+            @apply block text-center
         }
         .plan-card .price {
             font-family: "sans-serif";
@@ -64,13 +63,19 @@ form textarea {
     @apply flex flex-wrap w-full gap-5 justify-between my-5
 }
     .image-grid > li{
-        @apply min-w-full sm:min-w-[280px] md:min-w-[300px] lg:min-w-[350px] h-[180px] sm:h-[200px] bg-black relative hover:cursor-pointer hover:scale-110 transition
+        @apply min-w-full sm:min-w-[280px] md:min-w-[300px] lg:min-w-[350px] h-[190px] sm:h-[200px] bg-black relative hover:cursor-pointer hover:scale-110 transition
     }
     .image-grid .content {
         @apply absolute w-full h-full z-20 text-white p-5
     }
     .image-grid .content .desc {
         @apply md:hidden w-full py-2
+    }
+    .image-grid .shadow-bg {
+        @apply opacity-40 md:opacity-20
+    }
+    .image-grid > li:hover .shadow-bg {
+        @apply opacity-10 md:opacity-40
     }
     .image-grid > li:hover .content .desc {
         @apply block

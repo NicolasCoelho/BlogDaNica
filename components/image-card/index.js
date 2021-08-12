@@ -9,9 +9,9 @@ export default function ImageCard({...props}) {
     return (
         <li onClick={goToContato}>
             <div className="content">
-                <strong>{ props.title }</strong>
+                <strong className="font-bold">{ props.title }</strong>
                 <div className="desc">
-                    <p>{props.desc}</p>
+                    <p className="font-semibold">{props.desc}</p>
                     <span className="absolute bottom-[20px] text-center text-sm">Entrar em contato</span>
                 </div>
             </div>

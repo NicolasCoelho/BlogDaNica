@@ -49,9 +49,9 @@ export default function Home({ posts }) {
               objectFit="cover"
             />
           </div>
-          <h2 className="absolute inset-x-0 -bottom-20 m-auto bg-white w-full md:w-2/4 lg:w-2/5 xl:w-1/4 text-center text-5xl p-8 font-bold">
+          <h1 className="absolute inset-x-0 -bottom-20 m-auto bg-white w-full md:w-[400px] text-center text-3xl md:text-5xl p-8 font-bold">
             Organização sem mistérios
-          </h2>
+          </h1>
         </section>
         <section className="container m-auto sm:my-28 flex-col-reverse md:flex-row flex justify-around flex-wrap gap-x-4 gap-y-4">
           <div className="flex justify-between flex-col gap-y-4 mb-4 lg:m-0">
