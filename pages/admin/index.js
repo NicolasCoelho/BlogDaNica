@@ -1,5 +1,7 @@
 import Head from "next/head";
-import session from '../util/session';
+import Link from "next/link";
+import Header from "../../components/header/admin";
+import session from '../../util/session';
 
 export default function Admin() {
     return (
@@ -7,11 +9,7 @@ export default function Admin() {
             <Head>
                 <title>Adminstrador</title>
             </Head>
-            <div className="container m-auto">
-              <form method="POST" action="/api/logout">
-                <button type="submit" className="bg-primary text-white">Sair</button>
-              </form>
-            </div>
+            <Header></Header>
         </>
     )
 }

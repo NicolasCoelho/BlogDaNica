@@ -1,4 +1,5 @@
+add to post
 
-getServerSideProps
-
-getStaticProps
+minutos de leitura
+nome unico para url
+autor

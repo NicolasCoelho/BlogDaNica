@@ -147,16 +147,17 @@ export default function Home({ posts }) {
 export async function getServerSideProps() {
   const { db } = await connectToDatabase()
 
-  const posts = await db
+  let posts = await db
   .collection("posts")
   .find({})
   .sort({ metacritic: -1 })
   .limit(2)
-  .toArray();
+  .toArray()
+  posts = posts.map( (post) => { post['_id'] = `${post['_id']}`; return post})
   
   return {
     props: { 
-      posts: [{title: "Primeiro post", thumb: '/images/bedromm.jpg', createdAt: '14 de janeiro', resume: ' Resumo de descriçao do primeiro testeResumo de descriçao do primeiro testeResumo de descriçao do primeiro teste'},{title: "Primeiro post", thumb: '/images/bedromm.jpg', createdAt: '14 de janeiro', resume: 'Resumo de descriçao do primeiro teste'}] 
+      posts 
     },
   }
 }
