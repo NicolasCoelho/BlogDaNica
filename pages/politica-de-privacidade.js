@@ -10,7 +10,7 @@ export default function PoliticaDePrivacidade() {
             </Head>
             <Header/>
             <main className="container m-auto text-center">
-                <h1 className="m-10 text-2xl">Política de Privacidade</h1>
+                <h1 className="m-10">Política de Privacidade</h1>
                 <div className="max-w-[500px] m-auto text-justify">
                     <p>A Pol&iacute;tica de Privacidade On-Line do site <strong>Dicuore Organiza</strong> (https://dicuoreoraganiza.com.br) foi criada para respeitar a LGPD (<a href="http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/L13709.htm" target="_blank" rel="noopener">Lei Geral de Prote&ccedil;&atilde;o de Dados</a>) e afirmar o nosso compromisso com a seguran&ccedil;a e a privacidade das informa&ccedil;&otilde;es coletadas dos visitantes de nosso site. Esta pol&iacute;tica est&aacute; sujeita a eventuais atualiza&ccedil;&otilde;es e recomendamos que ela seja consultada periodicamente. Voc&ecirc; pode <a href="https://dicuoreorganiza.com.br/" target="_blank" rel="noopener">visitar nosso site</a> e conhecer nossos servi&ccedil;os e produtos, verificar nossas ofertas, ler artigos, obter informa&ccedil;&otilde;es e suporte sem precisar fornecer nenhuma informa&ccedil;&atilde;o pessoal. Mas, caso isso aconte&ccedil;a, esta pol&iacute;tica procura esclarecer como coletamos e tratamos seus dados pessoais.</p>
                     <p><br></br></p>

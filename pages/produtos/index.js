@@ -11,7 +11,7 @@ export default function Produtos() {
             </Head>
             <Header></Header>
             <main className="container m-auto text-center">
-                <h1 className="my-10 text-3xl">Página em construção <i className="fas fa-hammer"></i></h1>
+                <h1 className="my-10">Página em construção <i className="fas fa-hammer"></i></h1>
             </main>
             <Footer></Footer>
         </>

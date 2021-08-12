@@ -81,7 +81,7 @@ export default function Post(props) {
                     <article className="max-w-[650px]">
                         <section>
                             <header>
-                                <h1 className="text-4xl font-extrabold">{props.title}</h1>
+                                <h1 className="font-extrabold">{props.title}</h1>
                                 <div>
                                     <time className="capitalize"> 
                                         <strong>{formatDate(props.createdAt, 2)}</strong>

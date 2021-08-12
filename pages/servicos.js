@@ -16,7 +16,7 @@ export default function Servicos() {
       <main>
         <section className="relative h-[200px] md:h-[300px]">
             <div className="absolute w-full h-full z-20 flex flex-col justify-center text-center text-white">
-                <h1 className="text-2xl md:text-4xl font-bold">Serviços</h1>
+                <h1 className="font-bold">Serviços</h1>
                 <h2 className="text-xl md:text-3xl font-bold">Flexibilidade para qualquer projeto</h2>
             </div>
             <div className="shadow-bg"></div>

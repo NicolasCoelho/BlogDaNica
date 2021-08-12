@@ -57,7 +57,7 @@ export default function Contato() {
             </Head>
             <Header/>
             <main className="text-center container m-auto">
-                <h1 className="text-2xl md:text-4xl my-8 font-bold">Entre em contato</h1>
+                <h1 className="my-8 font-bold">Entre em contato</h1>
                 <p className="text-lg">Conte-me mais sobre o seu projeto. Mal posso esperar para trabalharmos juntas!</p>
                 <form className="md:max-w-[900px] m-auto" onSubmit={sendContact}>
                     <div className="flex flex-wrap justify-between w-full md:gap-x-2 lg:gap-x-20 flex-col md:flex-row py-8 sm:py-16">

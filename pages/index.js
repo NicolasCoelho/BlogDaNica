@@ -49,7 +49,7 @@ export default function Home({ posts }) {
               objectFit="cover"
             />
           </div>
-          <h1 className="absolute inset-x-0 -bottom-20 m-auto bg-white w-full md:w-[400px] text-center text-2xl md:text-4xl p-8 font-bold">
+          <h1 className="absolute inset-x-0 -bottom-20 m-auto bg-white w-full md:w-[400px] text-center p-8 font-bold">
             Organização sem mistérios
           </h1>
         </section>

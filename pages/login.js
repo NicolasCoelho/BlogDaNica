@@ -32,7 +32,7 @@ export default function Login() {
                 <title>Login</title>
             </Head>
             <main className="max-w-[500px] text-center m-auto px-10">
-                <h1 className="m-10 text-2xl font-play">Dicuori Organizza</h1>
+                <h1 className="m-10 font-play">Dicuori Organizza</h1>
                 <form onSubmit={login}>
                     <div className="mb-10 text-left">
                         <label>Usuário:</label>

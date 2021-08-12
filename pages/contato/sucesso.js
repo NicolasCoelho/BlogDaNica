@@ -11,7 +11,7 @@ export default function Sucesso() {
             </Head>
             <Header/>
             <main className="container m-auto text-center">
-                <h1 className="mt-10 text-2xl">Envio realizado com sucesso!</h1>
+                <h1 className="mt-10">Envio realizado com sucesso!</h1>
                 <h2 className="mb-10 text-2xl">Logo entrarei em contato com você =)</h2>
                 <p className="m-2 text-lg">Enquanto isso, fique a vontade para navegar no site e aprender mais sobre esse mundo.</p>
                 <p className="m-2 text-lg">Eu particularmente amo a seção de posts. Clique <b><Link href="/dicas"><a>aqui</a></Link></b>&nbsp;e confira!</p>
