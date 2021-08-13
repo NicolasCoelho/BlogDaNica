@@ -4,7 +4,7 @@ export default function Footer() {
 
     async function sendNewsletter(e) {
         e.preventDefault();
-        const result = e.target.querySelector('#result');
+        const result = e.target.querySelector('#result')
         const name = e.target.querySelector('#name')
         const email = e.target.querySelector('#email')
 
