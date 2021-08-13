@@ -16,7 +16,6 @@ export default function Home({ posts }) {
   return (
     <>
       <Head>
-        <title>Dicuore Organiza | Nicole Coelho</title>
         <script src="/js/instafeed.js"></script>
       </Head>
       <Header/>
