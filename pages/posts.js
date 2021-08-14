@@ -15,8 +15,8 @@ export default function Posts({ posts }) {
             <Header></Header>
             <main className="container m-auto text-center">
                 <section>
-                    <h1 className="mt-10">Posts</h1>
-                    <h2 className="text-lg md:text-2xl mb-10">Dicas, Curiosidades e as últimas noticias sobre o mundo da organização!</h2>
+                    <h1 className="my-8 font-bold">Meus posts</h1>
+                    <h2 className="text-lg mb-8">Dicas, Curiosidades e as últimas noticias sobre o mundo da organização!</h2>
                 </section>
                 <section className="flex flex-wrap gap-10 justify-around">
                     {posts.map((post, i) => (
