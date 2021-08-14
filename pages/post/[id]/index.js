@@ -18,6 +18,7 @@ export default function Post(props) {
 
     function copyLink(e) {
         e.preventDefault();
+        analytics('CopyLink')
         let input = document.createElement('INPUT')
         let text = e.target.parentNode.getAttribute('href')
         e.target.parentNode.setAttribute('title', 'Copiado!')
@@ -33,6 +34,12 @@ export default function Post(props) {
         document.querySelector('#clipboardText').setSelectionRange(0, 99999)
         document.execCommand('copy')
         document.querySelector('#clipboardText').remove()
+    }
+
+    function analytics(method) {
+        gtag('event', 'share', {
+            method
+        });
     }
 
     return (
@@ -56,22 +63,22 @@ export default function Post(props) {
                                     </a>
                                 </li>
                                 <li className="py-2">
-                                    <a href={`https://www.facebook.com/sharer/sharer.php?u=${baseUrl}/posts/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Facebook">
+                                    <a href={`https://www.facebook.com/sharer/sharer.php?u=${baseUrl}/posts/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Facebook" onClick={analytics('Facebook')}>
                                         <i className="fab fa-facebook-f hover:text-primary"></i>
                                     </a>
                                 </li>
                                 <li className="py-2">
-                                    <a href={`https://twitter.com/intent/tweet?text=${props.title}&url=${baseUrl}/posts/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Twitter">
+                                    <a href={`https://twitter.com/intent/tweet?text=${props.title}&url=${baseUrl}/posts/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Twitter"  onClick={analytics('Twitter')}>
                                         <i className="fab fa-twitter hover:text-primary"></i>
                                     </a>
                                 </li>
                                 <li className="py-2">
-                                    <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${baseUrl}/posts/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Twitter">
+                                    <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${baseUrl}/posts/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Twitter" onClick={analytics('Linkdin')}>
                                         <i className="fab fa-linkedin-in hover:text-primary"></i>
                                     </a>
                                 </li>
                                 <li className="py-2">
-                                    <a href={`mailto:?subject=${props.title}&body=Article:%20${baseUrl}/posts/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="E-mail"> 
+                                    <a href={`mailto:?subject=${props.title}&body=Article:%20${baseUrl}/posts/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="E-mail"  onClick={analytics('Email')}>
                                         <i className="far fa-envelope hover:text-primary"></i>
                                     </a>
                                 </li>

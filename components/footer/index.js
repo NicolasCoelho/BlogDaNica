@@ -21,6 +21,7 @@ export default function Footer() {
 
         response = await response.json()
         if (response.success) {
+            gtag('event', 'newsletter');
             name.value = "";
             email.value = "";
             result.innerHTML = 'Envio realizado com sucesso'

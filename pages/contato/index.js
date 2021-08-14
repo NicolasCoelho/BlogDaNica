@@ -6,6 +6,7 @@ export default function Contato() {
 
     async function sendContact(e) {
         e.preventDefault();
+        gtag('event', 'purchase');
         const result = e.target.querySelector('#result');
         const name = e.target.querySelector('#name')
         const email = e.target.querySelector('#email')
