@@ -54,9 +54,9 @@ export default function Home({ posts }) {
         </section>
         <section className="container m-auto sm:my-28 flex-col-reverse md:flex-row flex justify-around flex-wrap gap-x-4 gap-y-4">
           <div className="flex justify-between flex-col gap-y-4 mb-4 lg:m-0">
-          {posts.map((post, i) => (
-            <Card {...post} key={`card-${i}`}/>
-          ))}
+            {posts.map((post, i) => (
+              <Card {...post} key={`card-${i}`}/>
+            ))}
           </div>
           <article className="w-full lg:w-[550px] border border-gray-300 px-4 py-4 md:px-12 m:py-8 text-justify">
             <h2 className="font-bold pb-4 text-2xl text-center">
@@ -148,15 +148,17 @@ export async function getStaticProps() {
 
   let posts = await db
   .collection("posts")
-  .aggregate({$project: { title: 1, url: 1, resume: 1, createdAt: 1, thumbnail: 1 }})
+  .find({})
+  .project({title: 1, url: 1, resume: 1, createdAt: 1, thumbnail: 1})
+  .project({_id: 0, content: 0, metaDescription: 0, metaKeywords: 0})
   .sort({ metacritic: -1 })
   .limit(2)
   .toArray()
-  posts = posts.map( (post) => { post['_id'] = `${post['_id']}`; return post})
-  
+
   return {
     props: { 
       posts 
     },
+    revalidate: 72000
   }
 }
