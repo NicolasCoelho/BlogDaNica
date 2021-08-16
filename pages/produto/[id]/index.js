@@ -37,11 +37,7 @@ export default function Produto(props) {
     }
 
     function analytics(method) {
-        if (window) {
-            window.gtag('event', 'share', {
-                method
-            });
-        }
+        // Fix error with window call
     }
 
     return (
