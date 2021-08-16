@@ -119,3 +119,7 @@ form textarea {
     .admin-header nav ul li {
         @apply items-center
     }
+
+.product-inline {
+    @apply w-[50%] md:w-[30%] text-center
+}

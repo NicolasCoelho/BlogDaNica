@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: dicuoreorganiza.com.br
+Token: 095ea95451214d06f60073fb17da519a34b74282253b8f12012a1c658577a4df
