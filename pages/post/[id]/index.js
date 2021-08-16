@@ -37,9 +37,11 @@ export default function Post(props) {
     }
 
     function analytics(method) {
-        gtag('event', 'share', {
-            method
-        });
+        if (window) {
+            window.gtag('event', 'share', {
+                method
+            });
+        }
     }
 
     return (
