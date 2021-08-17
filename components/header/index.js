@@ -28,15 +28,15 @@ export default function Header() {
                     </ul>
                     <div className="flex md:hidden w-9/12 m-auto text-xl text-white font-bold justify-around justify-items-center">
                         <a href="https://www.instagram.com/dicuoreorganiza/" target="_blank" rel="noreferrer noopener"><i className="fab fa-instagram hover:text-primary"></i></a>
-                        <a href="https://www.facebook.com/" target="_blank" rel="noreferrer noopener"><i className="fab fa-facebook-f hover:text-primary"></i></a>
-                        <a href="https://br.pinterest.com/" target="_blank" rel="noreferrer noopener"><i className="fab fa-pinterest-p hover:text-primary"></i></a>
+                        <a href="https://www.facebook.com/dicuoreorganizza" target="_blank" rel="noreferrer noopener"><i className="fab fa-facebook-f hover:text-primary"></i></a>
+                        <a href="https://pin.it/2RyQkTO" target="_blank" rel="noreferrer noopener"><i className="fab fa-pinterest-p hover:text-primary"></i></a>
                         <a href="https://api.whatsapp.com/send?phone=5551982033056" target="_blank" rel="noreferrer noopener"><i className="fab fa-whatsapp hover:text-primary"></i></a>
                     </div>
                 </nav>
                 <div className="hidden md:flex w-1/3 md:w-1/5 text-xl font-bold justify-around justify-items-center">
                     <a href="https://www.instagram.com/dicuoreorganiza/" target="_blank" rel="noreferrer noopener"><i className="fab fa-instagram hover:text-primary"></i></a>
-                    <a href="https://www.facebook.com/" target="_blank" rel="noreferrer noopener"><i className="fab fa-facebook-f hover:text-primary"></i></a>
-                    <a href="https://br.pinterest.com/" target="_blank" rel="noreferrer noopener"><i className="fab fa-pinterest-p hover:text-primary"></i></a>
+                    <a href="https://www.facebook.com/dicuoreorganizza" target="_blank" rel="noreferrer noopener"><i className="fab fa-facebook-f hover:text-primary"></i></a>
+                    <a href="https://pin.it/2RyQkTO" target="_blank" rel="noreferrer noopener"><i className="fab fa-pinterest-p hover:text-primary"></i></a>
                     <a href="https://api.whatsapp.com/send?phone=5551982033056" target="_blank" rel="noreferrer noopener"><i className="fab fa-whatsapp hover:text-primary"></i></a>
                 </div>
                 <div className="block md:hidden">
