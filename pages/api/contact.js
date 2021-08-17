@@ -7,7 +7,6 @@ export default async (req, res) => {
     const { db } = await connectToDatabase()
 
     const newItem = await db.collection('contacts').insertOne({name, email, phone, state, clock, plan, message, status: 'new', createdAt: new Date().toISOString()})
-    console.log(newItem)
     try {
       let result = await sendEmail(
         'Dicuore Organiza <comercial@dicuoreorganiza.com.br>',
@@ -40,12 +39,9 @@ export default async (req, res) => {
           </p>
         </div>`
       )
-      console.log(result) 
     } catch (error) {
         console.log(error)
     }
-    
-    
     res.status(200).json({success: true})
   } catch (err) {
     res.status(500).json(err)
