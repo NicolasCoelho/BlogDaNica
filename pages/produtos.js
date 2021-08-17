@@ -8,6 +8,7 @@ import { connectToDatabase } from '../util/mongodb';
 
 
 export default function Produtos({produtos}) {
+    const baseUrl = "https://www.dicuoreorganiza.com.br"
     return (
         <>
             <Head>

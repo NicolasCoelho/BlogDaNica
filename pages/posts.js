@@ -6,6 +6,8 @@ import Card from '../components/card';
 import { connectToDatabase } from '../util/mongodb';
 
 export default function Posts({ posts }) {
+    const baseUrl = "https://www.dicuoreorganiza.com.br"
+    
     return (
         <>
             <Head>

@@ -4,6 +4,8 @@ import Footer from "../../components/footer"
 
 export default function Contato() {
 
+    const baseUrl = "https://www.dicuoreorganiza.com.br"
+
     async function sendContact(e) {
         e.preventDefault();
         gtag('event', 'purchase');

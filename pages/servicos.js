@@ -6,7 +6,8 @@ import ImageCard from '../components/image-card'
 import Link from 'next/link'
 
 export default function Servicos() {
-  return (
+    const baseUrl = "https://www.dicuoreorganiza.com.br"
+    return (
     <>
       <Head>
         <title>Serviços | Dicuore Organiza</title>

@@ -75,22 +75,27 @@ export default function Post(props) {
                                     </a>
                                 </li>
                                 <li className="py-2">
-                                    <a href={`https://www.facebook.com/sharer/sharer.php?u=${baseUrl}/post/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Facebook" onClick={analytics('Facebook')}>
+                                    <a href={`https://api.whatsapp.com/send?text=${baseUrl}/post/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Compartilhar no Whatsapp" onClick={analytics('Whatsapp')}>
+                                        <i className="fab fa-whatsapp hover:text-primary"></i>
+                                    </a>
+                                </li>
+                                <li className="py-2">
+                                    <a href={`https://www.facebook.com/sharer/sharer.php?u=${baseUrl}/post/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Compartilhar no Facebook" onClick={analytics('Facebook')}>
                                         <i className="fab fa-facebook-f hover:text-primary"></i>
                                     </a>
                                 </li>
                                 <li className="py-2">
-                                    <a href={`https://twitter.com/intent/tweet?text=${props.title}&url=${baseUrl}/post/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Twitter"  onClick={analytics('Twitter')}>
+                                    <a href={`https://twitter.com/intent/tweet?text=${props.title}&url=${baseUrl}/post/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Compartilhar no Twitter"  onClick={analytics('Twitter')}>
                                         <i className="fab fa-twitter hover:text-primary"></i>
                                     </a>
                                 </li>
                                 <li className="py-2">
-                                    <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${baseUrl}/post/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Twitter" onClick={analytics('Linkdin')}>
+                                    <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${baseUrl}/post/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Compartilhar no Linkdin" onClick={analytics('Linkdin')}>
                                         <i className="fab fa-linkedin-in hover:text-primary"></i>
                                     </a>
                                 </li>
                                 <li className="py-2">
-                                    <a href={`mailto:?subject=${props.title}&body=Article:%20${baseUrl}/post/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="E-mail"  onClick={analytics('Email')}>
+                                    <a href={`mailto:?subject=${props.title}&body=Article:%20${baseUrl}/post/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Compartilhar por e-mail"  onClick={analytics('Email')}>
                                         <i className="far fa-envelope hover:text-primary"></i>
                                     </a>
                                 </li>
