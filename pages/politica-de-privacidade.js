@@ -11,6 +11,8 @@ export default function PoliticaDePrivacidade() {
                 <meta property="og:title" content="Política de Privacidade | Dicuore Organiza"></meta>
                 <meta property="og:description" content="Política de privacidade de Dicuore Organiza"></meta>
                 <meta property="og:url" content={`${baseUrl}/politica-de-privacidade`}></meta>
+                <meta property="og:type" content="website"></meta>
+                <meta property="og:image" itemProp="image" content="https://www.dicuoreorganiza.com.br/favicon.png"></meta>
             </Head>
             <Header/>
             <main className="container m-auto text-center">

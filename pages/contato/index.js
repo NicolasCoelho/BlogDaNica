@@ -57,8 +57,12 @@ export default function Contato() {
         <>
             <Head>
                 <title>Contato | Dicuore Organiza</title>
+                <meta name="description" content="Orçamento gratuito! Entre em contato agora mesmo."></meta>
+                <meta property="og:description" content="Orçamento gratuito! Entre em contato agora mesmo."></meta>
                 <meta property="og:title" content="Contato | Dicuore Organiza"></meta>
                 <meta property="og:url" content={`${baseUrl}/contato`}></meta>
+                <meta property="og:type" content="website"></meta>
+                <meta property="og:image" itemProp="image" content="https://www.dicuoreorganiza.com.br/favicon.png"></meta>
             </Head>
             <Header/>
             <main className="text-center container m-auto">

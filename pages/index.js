@@ -17,6 +17,12 @@ export default function Home({ posts }) {
     <>
       <Head>
         <script src="/js/instafeed.js"></script>
+        <meta property="og:site_name" content="Dicuore Organiza | Nicole Coelho"></meta>
+        <meta property="og:title" content="Dicuore Organiza | Nicole Coelho"></meta>
+        <meta property="og:description" content="Organize seu ambiente da melhor maneira possível. Dicas e serviços para deixar sua vida mais prática e aconchegante."></meta>
+        <meta property="og:url" content={`https://www.dicuoreorganiza.com.br`}></meta>
+        <meta property="og:type" content="website"></meta>
+        <meta property="og:image" itemProp="image" content="https://www.dicuoreorganiza.com.br/favicon.png"></meta>
       </Head>
       <Header/>
       <main>

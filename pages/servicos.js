@@ -15,6 +15,8 @@ export default function Servicos() {
         <meta property="og:title" content="Serviços | Dicuore Organiza"></meta>
         <meta property="og:description" content="Serviços de Personal Organizer com preços flexíveis e práticos."></meta>
         <meta property="og:url" content={`${baseUrl}/servicos`}></meta>
+        <meta property="og:type" content="website"></meta>
+        <meta property="og:image" itemProp="image" content="https://www.dicuoreorganiza.com.br/favicon.png"></meta>
       </Head>
       <Header/>
       <main>
