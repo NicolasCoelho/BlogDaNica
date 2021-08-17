@@ -40,6 +40,15 @@ export default function Post(props) {
         // Fix error with window call
     }
 
+    function resizeUrl(url, quality) {
+        
+        let cropped = url.split('/upload/')
+
+        let finalUrl = `${cropped[0]}/upload/c_scale,q_${quality},w_300,y_494/${cropped[1]}`
+                
+        return finalUrl
+    }
+    
     return (
         <>
             <Head>
@@ -47,6 +56,11 @@ export default function Post(props) {
                 <meta name="description" content={props.metaDescription}></meta>
                 <meta name="author" content={props.author}></meta>
                 <meta name="keywords" content={props.metaKeywords}></meta>
+                <meta property="og:title" content={`${props.title} | Dicuore Organiza`}></meta>
+                <meta property="og:description" content={props.metaDescription}></meta>
+                <meta property="og:type" content="article"></meta>
+                <meta property="og:image" content={resizeUrl(props.thumbnail, 60)}></meta>
+                <meta property="og:url" content={`${baseUrl}/post/${props.url}`}></meta>
             </Head>
             <Header></Header>
             <main className="container m-auto post">
@@ -56,27 +70,27 @@ export default function Post(props) {
                             <span>Share</span>
                             <ul className="flex md:block justify-around">
                                 <li className="py-2">
-                                    <a href={`https://www.facebook.com/sharer/sharer.php?u=${baseUrl}/posts/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Copiar Link" onClick={copyLink}>
+                                    <a href={`https://www.facebook.com/sharer/sharer.php?u=${baseUrl}/post/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Copiar Link" onClick={copyLink}>
                                         <i className="fas fa-link hover:text-primary"></i>
                                     </a>
                                 </li>
                                 <li className="py-2">
-                                    <a href={`https://www.facebook.com/sharer/sharer.php?u=${baseUrl}/posts/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Facebook" onClick={analytics('Facebook')}>
+                                    <a href={`https://www.facebook.com/sharer/sharer.php?u=${baseUrl}/post/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Facebook" onClick={analytics('Facebook')}>
                                         <i className="fab fa-facebook-f hover:text-primary"></i>
                                     </a>
                                 </li>
                                 <li className="py-2">
-                                    <a href={`https://twitter.com/intent/tweet?text=${props.title}&url=${baseUrl}/posts/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Twitter"  onClick={analytics('Twitter')}>
+                                    <a href={`https://twitter.com/intent/tweet?text=${props.title}&url=${baseUrl}/post/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Twitter"  onClick={analytics('Twitter')}>
                                         <i className="fab fa-twitter hover:text-primary"></i>
                                     </a>
                                 </li>
                                 <li className="py-2">
-                                    <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${baseUrl}/posts/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Twitter" onClick={analytics('Linkdin')}>
+                                    <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${baseUrl}/post/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="Twitter" onClick={analytics('Linkdin')}>
                                         <i className="fab fa-linkedin-in hover:text-primary"></i>
                                     </a>
                                 </li>
                                 <li className="py-2">
-                                    <a href={`mailto:?subject=${props.title}&body=Article:%20${baseUrl}/posts/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="E-mail"  onClick={analytics('Email')}>
+                                    <a href={`mailto:?subject=${props.title}&body=Article:%20${baseUrl}/post/${props.url}`} className="text-2xl" target="_BLANK" rel="noreferrer noopener" title="E-mail"  onClick={analytics('Email')}>
                                         <i className="far fa-envelope hover:text-primary"></i>
                                     </a>
                                 </li>
@@ -88,7 +102,7 @@ export default function Post(props) {
                             <header>
                                 <h1 className="font-extrabold">{props.title}</h1>
                                 <div>
-                                    <time className="capitalize"> 
+                                    <time className="capitalize" dateTime={props.createdAt}> 
                                         <strong>{formatDate(props.createdAt, 2)}</strong>
                                     </time>
                                     <b> &nbsp;|&nbsp; {props.readTime} min</b>

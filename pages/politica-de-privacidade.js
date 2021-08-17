@@ -7,6 +7,9 @@ export default function PoliticaDePrivacidade() {
         <>
             <Head>
                 <title>Política de Privacidade | Dicuore Organiza</title>
+                <meta property="og:title" content="Política de Privacidade | Dicuore Organiza"></meta>
+                <meta property="og:description" content="Política de privacidade de Dicuore Organiza"></meta>
+                <meta property="og:url" content={`${baseUrl}/politica-de-privacidade`}></meta>
             </Head>
             <Header/>
             <main className="container m-auto text-center">

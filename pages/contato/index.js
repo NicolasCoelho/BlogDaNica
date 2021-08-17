@@ -55,6 +55,8 @@ export default function Contato() {
         <>
             <Head>
                 <title>Contato | Dicuore Organiza</title>
+                <meta property="og:title" content="Contato | Dicuore Organiza"></meta>
+                <meta property="og:url" content={`${baseUrl}/contato`}></meta>
             </Head>
             <Header/>
             <main className="text-center container m-auto">

@@ -11,6 +11,9 @@ export default function Posts({ posts }) {
             <Head>
                 <title>Posts | Dicuore Organiza</title>
                 <meta name="description" content="Artigos sobre organização de ambientes, casas e muito mais."></meta>
+                <meta property="og:title" content="Posts | Dicuore Organiza"></meta>
+                <meta property="og:description" content="Artigos sobre organização de ambientes, casas e muito mais."></meta>
+                <meta property="og:url" content={`${baseUrl}/posts`}></meta>
             </Head>
             <Header></Header>
             <main className="container m-auto text-center">

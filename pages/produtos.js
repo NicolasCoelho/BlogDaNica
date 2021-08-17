@@ -13,6 +13,9 @@ export default function Produtos({produtos}) {
             <Head>
                 <title>Produtos | Dicuore Organiza</title>
                 <meta name="description" content="Produtos para manter a sua vida mais organizada."></meta>
+                <meta property="og:title" content="Produtos | Dicuore Organiza"></meta>
+                <meta property="og:description" content="Produtos para manter a sua vida mais organizada."></meta>
+                <meta property="og:url" content={`${baseUrl}/produtos`}></meta>
             </Head>
             <Header></Header>
             <main className="container m-auto text-center">
