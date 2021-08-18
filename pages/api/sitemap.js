@@ -22,7 +22,7 @@ export default async (req, res) => {
             smStream.write({
                 url: `/post/${post.url}`,
                 changefreq: 'daily',
-                priority: 0.9
+                priority: 0.8
             });
         });
 
