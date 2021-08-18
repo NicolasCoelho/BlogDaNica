@@ -16,6 +16,9 @@ h1 {
     max-height: 500px;
     min-height: 350px;
 }
+.post-card:hover {
+    cursor: pointer;
+}
 
 .mobile-menu-oppened {
     right: 0;
