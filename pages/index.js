@@ -21,8 +21,7 @@ export default function Home({ posts }) {
         <meta property="og:description" content="Personal organizer certificada. Organize seu ambiente da melhor maneira possível. Dicas e serviços para deixar sua vida mais prática e aconchegante."></meta>
         <meta property="og:url" content={`https://www.dicuoreorganiza.com.br`}></meta>
         <meta property="og:type" content="website"></meta>
-        <meta property="og:image" itemProp="image" content="https://www.dicuoreorganiza.com.br/favicon.png"></meta>
-      
+        <meta property="og:image" itemProp="image" content="https://res.cloudinary.com/dicuore-organiza/image/upload/c_scale,h_400,q_70,w_600/v1628708657/logo_j6mtgv.png"></meta>
         <script src="/js/instafeed.js"></script>
       </Head>
       <Header/>
