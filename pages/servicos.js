@@ -48,30 +48,30 @@ export default function Servicos() {
         </section>
         <section className="container m-auto py-10 flex flex-wrap gap-5 justify-between">
             <article className="plan-card">
-                <h3>Plano 1</h3>
+                <h3>Te ajudo a se ajudar</h3>
                 <div className="text-center">
                     <span className="text-sm">A partir de</span>
                     <br></br>
-                    <strong className="text-2xl">R$ 499,00</strong>
+                    <strong className="text-2xl">R$ 199,00</strong>
                 </div>
                 <ul>
                     <span>Resumo</span>
-                    <li>Organização menor e menos complexa</li>
+                    <li>Organização de espaços menores</li>
+                    <li>Ex: Organização de armários e gavetas</li>
                     <li>Ajuda operacional</li>
-                    <li>Ajustar das técnicas às suas necessidades</li>
+                    <li>Ajuste das técnicas às suas necessidades</li>
                     <li>Experiência mais econômica</li>
-                    <li>Exemplo: Organização de armários</li>
-                    <li>Necessário visita técnica</li>
+                    <li>Necessário levantamento técnico</li>
                 </ul>
                 <Link href="/contato"><a className="button text-center text-white">Eu quero</a></Link>
                 <span className="text-xs">* Preço de referência. O valor final pode alterar de acordo com o projeto</span>
             </article>
             <article className="plan-card">
-                <h3>Plano 2</h3>
+                <h3>Adeus bagunça</h3>
                 <div className="text-center">
                     <span className="text-sm">A partir de</span>
                     <br></br>
-                    <strong className="text-2xl">R$ 899,00</strong>
+                    <strong className="text-2xl">R$ 399,00</strong>
                 </div>
                 <ul>
                     <span>Resumo</span>
@@ -79,32 +79,54 @@ export default function Servicos() {
                     <li>Adequação de produtos organizadores</li>
                     <li>Treinamento da pessoa responsável</li>
                     <li>Inclui kit de gabaritos para as dobras</li>
-                    <li>Ambiante a escolha do cliente</li>
-                    <li>Necessário visita técnica</li>
+                    <li>Ambiente a escolha do cliente</li>
+                    <li>Necessário levantamento técnico</li>
                 </ul>
                 <Link href="/contato"><a className="button text-center text-white">Eu quero</a></Link>
                 <span className="text-xs">* Preço de referência. O valor final pode alterar de acordo com o projeto</span>
             </article>
             <article className="plan-card">
-                <h3>Plano 3</h3>
+                <h3>Organiza minha vida</h3>
                 <div className="text-center">
                     <span className="text-sm">A partir de</span>
                     <br></br>
-                    <strong className="text-2xl">R$ 1.799,00</strong>
+                    <strong className="text-2xl">R$ 999,00</strong>
                 </div>
                 <ul>
                     <span>Resumo</span>
                     <li>Organização de dois ou mais espaços</li>
                     <li>Todos os itens dos planos anteriores</li>
                     <li>Planejamento completo</li>
-                    <li>Execução dedicada</li>
+                    <li>Pós mudança (sob consulta)</li>
                     <li>Visita de manutenção</li>
-                    <li>Necessário visita técnica</li>
+                    <li>Necessário levantamento técnico</li>
                 </ul>
                 <Link href="/contato"><a className="button text-center text-white">Eu quero</a></Link>
                 <span className="text-xs">* Preço de referência. O valor final pode alterar de acordo com o projeto</span>
             </article>
         </section>
+        <section className="container m-auto text-center">
+            <h3 className="text-xl md:text-3xl font-bold pb-8">Planos customizados</h3>
+            <div className="py-4 flex flex-wrap justify-between">
+                <div className="w-full md:w-1/2 relative h-[200px] md:h-[400px]">
+                    <Image
+                        src="/images/toalha.jpg"
+                        alt="Por que"
+                        quality="70"
+                        layout="fill"
+                        objectFit="cover"
+                    />
+                </div>
+                <div className="w-full md:w-1/2 ">
+                    <div className="md:w-3/4 pt-4 h-[250px] md:h-full m-auto flex items-center flex-col justify-around">
+                        <p className="text-lg">Precisa de um serviço específico ou um plano customizado?</p>
+                        <p className="text-lg">Entre em contato comigo! Tenho certeza que posso te ajudar.</p>
+                        <p className="text-lg">Organize sua vida!</p>
+                        <Link href="/contato"><a className="button text-center text-white">Entrar em contato</a></Link>
+                    </div>    
+                </div>
+            </div>
+        </section>    
       </main>
       <Footer/>
     </>

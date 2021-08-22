@@ -100,9 +100,11 @@ export default function Contato() {
                             <select required id="plan" name="plan">
                                 <option selected>...</option>
                                 <option>Quero um serviço em específico</option>
-                                <option>Plano 1</option>
-                                <option>Plano 2</option>
-                                <option>Plano 3</option>
+                                <option>Plano: Te ajudo a se ajudar</option>
+                                <option>Plano: Adeus bagunça</option>
+                                <option>Plano: Organiza minha vida</option>
+                                <option>Opiniões ou dúvidas</option>
+                                <option>Outro</option>
                             </select>
                         </div>
                         <div className="inline-block text-left w-full my-2">

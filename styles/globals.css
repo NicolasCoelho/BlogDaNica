@@ -127,16 +127,16 @@ form textarea {
     @apply w-[50%] text-center border transition p-2 md:p-2 md:px-4 md:w-[30%] md:my-10 md:hover:border md:hover:scale-110
 }
     .product-inline .product-image {
-        @apply h-[180px] sm:h-[200px] md:h-[240px] xl:h-[300px] w-full
+        @apply h-[180px] sm:h-[200px] md:h-[240px] xl:h-[300px] w-full p-4
     }
         .product-inline .product-image .product-image-wrapper {
             @apply flex items-center h-full mx-auto
         }
             .product-inline .product-image .product-image-wrapper img {
-                @apply w-full
+                @apply w-auto max-h-full m-auto
             }
     .product-inline .product-title {
-        @apply md:font-bold md:text-lg
+        @apply md:font-bold md:text-lg pt-4
     }
     .product-inline .product-resume {
         @apply h-[100px] hidden md:flex items-center overflow-hidden md:text-sm lg:text-base 
