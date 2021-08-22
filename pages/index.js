@@ -27,7 +27,7 @@ export default function Home({ posts }) {
       <Header/>
       <main>
         <section className="flex w-full justify-between gap-x-2 relative">
-          <div className="hidden md:block relative w-2/6 h-banner">
+          <div className="hidden md:block relative w-2/6 h-[300px] md:h-[640px]">
             <Image
               src="/images/closet2.jpg"
               alt="Guarda-Roupas"
@@ -36,7 +36,7 @@ export default function Home({ posts }) {
               objectFit="cover"
             />
           </div>
-          <div className="relative w-full md:w-2/6 h-banner">
+          <div className="relative w-full md:w-2/6 h-[300px] md:h-[640px]">
             <Image
               src="/images/closet10.jpg"
               alt="Closet"
@@ -45,7 +45,7 @@ export default function Home({ posts }) {
               objectFit="cover"
             />
           </div>
-          <div className="hidden md:block relative w-2/6 h-banner">
+          <div className="hidden md:block relative w-2/6 h-[300px] md:h-[640px]">
             <Image
               src="/images/room4.jpg"
               alt="Cozinha"
