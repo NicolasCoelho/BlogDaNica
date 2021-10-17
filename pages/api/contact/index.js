@@ -1,5 +1,5 @@
-import { connectToDatabase } from '../../util/mongodb';
-import sendEmail from '../../util/mailsender';
+import { connectToDatabase } from '../../../util/mongodb';
+import sendEmail from '../../../util/mailsender';
 
 export default async (req, res) => {
   try {
