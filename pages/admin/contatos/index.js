@@ -9,7 +9,7 @@ export default function Contatos(props) {
       
     }
 
-    function deleteItem(id) {
+    async function deleteItem(id) {
       
     }
 

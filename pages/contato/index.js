@@ -6,6 +6,8 @@ export default function Contato() {
 
     const baseUrl = "https://www.dicuoreorganiza.com.br"
 
+    const sendMyFormUrl = "https://nicksendmyform.herokuapp.com/v1/send"
+
     async function sendContact(e) {
         e.preventDefault();
         gtag('event', 'purchase');
@@ -17,6 +19,8 @@ export default function Contato() {
         const clock = e.target.querySelector('#clock')
         const plan = e.target.querySelector('#plan')
         const message = e.target.querySelector('#message')
+        const formkey = e.target.querySelector('input[name="formkey"]')
+        const captcha = e.target.querySelector('iframe').getAttribute('data-hcaptcha-response')
 
         const payload = {
             name: name.value,
@@ -25,17 +29,23 @@ export default function Contato() {
             state: state.value,
             clock: clock.value,
             plan: plan.value,
-            message: message.value
+            message: message.value,
+            formkey: formkey.value,
+            captcha: captcha
         }
         result.innerHTML = "Enviando...";
-        let response = await fetch('/api/contact', {
+
+        const request = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
-        })
+        }
+
+        let response = await fetch(sendMyFormUrl, request)
 
         response = await response.json()
         if (response.success) {
+            await fetch('/api/contact', request)
             name.value = "";
             email.value = "";
             phone.value = "";
@@ -63,6 +73,7 @@ export default function Contato() {
                 <meta property="og:url" content={`${baseUrl}/contato`}></meta>
                 <meta property="og:type" content="website"></meta>
                 <meta property="og:image" itemProp="image" content="https://www.dicuoreorganiza.com.br/favicon.png"></meta>
+                <script src="/js/captcha.js"></script>
             </Head>
             <Header/>
             <main className="text-center container m-auto">
@@ -89,7 +100,7 @@ export default function Contato() {
                         <div className="inline-block text-left w-full md:w-[350px] lg:w-[400px] my-2">
                             <label className="w-full" htmlFor="clock">Melhor horário para contato</label>
                             <select required id="clock" name="clock">
-                                <option selected>...</option>
+                                <option defaultValue>...</option>
                                 <option>Manhã</option>
                                 <option>Tarde</option>
                                 <option>Noite</option>
@@ -98,7 +109,7 @@ export default function Contato() {
                         <div className="inline-block text-left w-full md:w-[350px] lg:w-[400px] my-2">
                             <label className="w-full" htmlFor="plan">Plano de interesse</label>
                             <select required id="plan" name="plan">
-                                <option selected>...</option>
+                                <option defaultValue>...</option>
                                 <option>Quero um serviço em específico</option>
                                 <option>Plano: Te ajudo a se ajudar</option>
                                 <option>Plano: Adeus bagunça</option>
@@ -111,6 +122,8 @@ export default function Contato() {
                             <label className="w-full" htmlFor="message">Descreva brevemente o seu projeto</label>
                             <textarea required maxLength="300" minLength="10" id="message" name="message"></textarea>
                         </div>
+                        <div className="h-captcha flex justify-center w-full py-2" data-sitekey="9fae15d1-e796-459c-ace5-44706715270a"></div>
+                        <input type="hidden" value="62f0652e125ebbabd2c85542" name="formkey" wfd-invisible="true"></input>
                     </div>
                     <button type="submit" className="text-white primary">Enviar</button>
                     <div className="w-full text-center text-white py-2">
