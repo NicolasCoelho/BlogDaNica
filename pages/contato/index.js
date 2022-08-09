@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Header from "../../components/header"
 import Footer from "../../components/footer"
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 
 export default function Contato() {
 
@@ -73,7 +74,6 @@ export default function Contato() {
                 <meta property="og:url" content={`${baseUrl}/contato`}></meta>
                 <meta property="og:type" content="website"></meta>
                 <meta property="og:image" itemProp="image" content="https://www.dicuoreorganiza.com.br/favicon.png"></meta>
-                <script src="/js/captcha.js"></script>
             </Head>
             <Header/>
             <main className="text-center container m-auto">
@@ -122,7 +122,9 @@ export default function Contato() {
                             <label className="w-full" htmlFor="message">Descreva brevemente o seu projeto</label>
                             <textarea required maxLength="300" minLength="10" id="message" name="message"></textarea>
                         </div>
-                        <div className="h-captcha flex justify-center w-full py-2" data-sitekey="9fae15d1-e796-459c-ace5-44706715270a"></div>
+                        <div className="flex justify-center w-full py-2">
+                            <HCaptcha sitekey="9fae15d1-e796-459c-ace5-44706715270a"/>
+                        </div>
                         <input type="hidden" value="62f0652e125ebbabd2c85542" name="formkey" wfd-invisible="true"></input>
                     </div>
                     <button type="submit" className="text-white primary">Enviar</button>
