@@ -55,7 +55,7 @@ export default function Footer() {
                 </form>
             </div>
             <div className="container m-auto text-center font-arial py-2">
-                <strong>2021 &copy; Todos direitos reservados. </strong>
+                <strong>2022 &copy; Todos direitos reservados. </strong>
                 <br></br>
                 <Link href="/politica-de-privacidade"><a>Política de Privacidade</a></Link>
             </div>

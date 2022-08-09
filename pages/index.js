@@ -4,6 +4,7 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 import Card from '../components/card'
 import Script from 'next/script'
+import Link from 'next/link'
 
 import { connectToDatabase } from '../util/mongodb'
 
@@ -89,6 +90,10 @@ export default function Home({ posts }) {
             <p className="py-4">
               Espero que sua experiência por aqui seja enriquecedora. <br></br> <b>Sinta-se em casa!</b>
             </p>
+            
+            <div className="text-center my-4">
+              <Link href="/contato"><a className="px-5 py-3 font-bold text-white bg-primary">Entrar em contato</a></Link>
+            </div>
           </article>
         </section>
         <section className="container m-auto text-center">
@@ -134,7 +139,7 @@ export default function Home({ posts }) {
           </div>
           <Script strategy="lazyOnload">
             {`var feed = new Instafeed({
-            accessToken: 'IGQVJVUkJ6V3FkR1lGMzE4YldrcUtPT25PRHoybjhaZAGJOMTB3ZAEFrQ1BkZAU1TYUY4TmJ2RXJDUGFPckp1NjNGQjgzc0FKMWVYTDVZAVU5RRV9sQWhwaXg4cW5pXzZACTGxrb1dSUVp6SVhtMFpiQzBqSAZDZD',
+            accessToken: 'IGQVJXUmRnc3RuWXJhRG1lTkJ3MmtfZAll5Mjk4RUE4dGJnWUc4M2ZA3bTNzN3NJYWxycGZAFZAVpOajV1cWNldEtoamdpYWJRTGlJUE5aMGRQVlh6NDh5VFRDbUNlZA1pLdGNHUzlIZA2VXSFJ6eUEwb2ZAkUQZDZD',
             limit: 4
             });
             feed.run();`}
