@@ -33,7 +33,6 @@ export default function Home({ posts }) {
               src="/images/closet2.jpg"
               alt="Guarda-Roupas"
               quality="50"
-              priority="true"
               layout="fill"
               objectFit="cover"
             />
@@ -53,7 +52,6 @@ export default function Home({ posts }) {
               src="/images/room4.jpg"
               alt="Cozinha"
               quality="50"
-              priority="true"
               layout="fill"
               objectFit="cover"
             />
