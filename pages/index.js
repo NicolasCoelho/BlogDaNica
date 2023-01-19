@@ -32,7 +32,8 @@ export default function Home({ posts }) {
             <Image
               src="/images/closet2.jpg"
               alt="Guarda-Roupas"
-              quality="70"
+              quality="50"
+              priority="true"
               layout="fill"
               objectFit="cover"
             />
@@ -41,7 +42,8 @@ export default function Home({ posts }) {
             <Image
               src="/images/closet10.jpg"
               alt="Closet"
-              quality="70"
+              quality="50"
+              priority="true"
               layout="fill"
               objectFit="cover"
             />
@@ -50,7 +52,8 @@ export default function Home({ posts }) {
             <Image
               src="/images/room4.jpg"
               alt="Cozinha"
-              quality="70"
+              quality="50"
+              priority="true"
               layout="fill"
               objectFit="cover"
             />
@@ -92,12 +95,12 @@ export default function Home({ posts }) {
             </p>
             
             <div className="text-center my-4">
-              <Link href="/contato"><a className="px-5 py-3 font-bold text-white bg-primary">Entrar em contato</a></Link>
+              <Link href="/contato" className="px-5 py-3 font-bold text-white bg-primary">Entrar em contato</Link>
             </div>
           </article>
         </section>
         <section className="container m-auto text-center">
-          <h2 className="text-4xl">Prazer, Nicole</h2>
+          <h3 className="text-4xl">Prazer, Nicole</h3>
           <div className="flex flex-wrap justify-around py-10"> 
             <div className="relative inline-block h-[300px] lg:h-[500px] w-full md:w-[40%] xl:w-[500px] border border-2 border-primary overflow-hidden">
               <Image
@@ -134,7 +137,7 @@ export default function Home({ posts }) {
         </section>
         <section className="container m-auto">
           <div className="instagram">
-            <h4> <a className="text-2xl font-play text-primary" href="https://www.instagram.com/dicuoreorganiza/" target="_BLANK" rel="noopener noreferrer"><i className="fab fa-instagram text-primary text-2xl"></i>&nbsp;DicuoreOrganiza</a></h4>	
+            <span> <a className="text-2xl font-play text-primary" href="https://www.instagram.com/dicuoreorganiza/" target="_BLANK" rel="noopener noreferrer"><i className="fab fa-instagram text-primary text-2xl"></i>&nbsp;DicuoreOrganiza</a></span>	
             <div id="instafeed"></div>
           </div>
           <Script strategy="lazyOnload">
@@ -162,7 +165,7 @@ export async function getStaticProps() {
   .find({})
   .project({title: 1, url: 1, resume: 1, createdAt: 1, thumbnail: 1})
   .project({_id: 0, content: 0, metaDescription: 0, metaKeywords: 0})
-  .sort({ metacritic: -1 })
+  .sort({ createdAt: -1 })
   .limit(2)
   .toArray()
 

@@ -7,10 +7,10 @@ export default function Header() {
               <div className="flex items-center">
                 <nav>
                   <ul>
-                    <li><Link href="/admin/posts/criar"><a>Criar Post</a></Link></li>
-                    <li><Link href="/admin/produtos/criar"><a>Criar Produto</a></Link></li>
-                    <li><Link href="/admin/contatos"><a>Contatos</a></Link></li>
-                    <li><Link href="/admin/newsletter"><a>Newsletter</a></Link></li>
+                    <li><Link href="/admin/posts">Posts</Link></li>
+                    <li><Link href="/admin/produtos/criar">Criar Produto</Link></li>
+                    <li><Link href="/admin/contatos">Contatos</Link></li>
+                    <li><Link href="/admin/newsletter">Newsletter</Link></li>
                   </ul>
                 </nav>
               </div>

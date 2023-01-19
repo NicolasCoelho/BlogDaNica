@@ -63,7 +63,7 @@ export default function Servicos() {
                     <li>Experiência mais econômica</li>
                     <li>Necessário levantamento técnico</li>
                 </ul>
-                <Link href="/contato"><a className="button text-center text-white">Eu quero</a></Link>
+                <Link href="/contato" className="button text-center text-white">Eu quero</Link>
                 <span className="text-xs">* Preço de referência. O valor final pode alterar de acordo com o projeto</span>
             </article>
             <article className="plan-card">
@@ -82,7 +82,7 @@ export default function Servicos() {
                     <li>Ambiente a escolha do cliente</li>
                     <li>Necessário levantamento técnico</li>
                 </ul>
-                <Link href="/contato"><a className="button text-center text-white">Eu quero</a></Link>
+                <Link href="/contato" className="button text-center text-white">Eu quero</Link>
                 <span className="text-xs">* Preço de referência. O valor final pode alterar de acordo com o projeto</span>
             </article>
             <article className="plan-card">
@@ -101,7 +101,7 @@ export default function Servicos() {
                     <li>Visita de manutenção</li>
                     <li>Necessário levantamento técnico</li>
                 </ul>
-                <Link href="/contato"><a className="button text-center text-white">Eu quero</a></Link>
+                <Link href="/contato" className="button text-center text-white">Eu quero</Link>
                 <span className="text-xs">* Preço de referência. O valor final pode alterar de acordo com o projeto</span>
             </article>
         </section>
@@ -122,7 +122,7 @@ export default function Servicos() {
                         <p className="text-lg">Precisa de um serviço específico ou um plano customizado?</p>
                         <p className="text-lg">Entre em contato comigo! Tenho certeza que posso te ajudar.</p>
                         <p className="text-lg">Organize sua vida!</p>
-                        <Link href="/contato"><a className="button text-center text-white">Entrar em contato</a></Link>
+                        <Link href="/contato" className="button text-center text-white">Entrar em contato</Link>
                     </div>    
                 </div>
             </div>

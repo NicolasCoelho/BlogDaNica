@@ -2,15 +2,23 @@ import Header from "../../../components/header/admin";
 import session from '../../../util/session';
 import { connectToDatabase } from '../../../util/mongodb';
 import formatDate from "../../../util/formatDate";
+import { useRouter } from 'next/router';
 
 export default function Contatos(props) {
+    const router = useRouter()
 
-    function setItemRead(id) {
-      
-    }
-
-    async function deleteItem(id) {
-      
+    function deleteItem(id) {
+      try {
+        fetch(`/api/contatos/${id}/delete`, {
+          method: 'POST', 
+          headers: {
+            'content-type': 'application/json' 
+          }
+        })
+        router.reload() 
+      } catch (error) {
+        console.log(error)
+      }
     }
 
     return (
@@ -30,15 +38,13 @@ export default function Contatos(props) {
               <tbody>
                 {props.results.map((contact, i) => {
                   return <>
-                    <tr className="hover:cursor-pointer"> 
+                    <tr className="hover:cursor-pointer" key={contact._id}> 
                       <td className="text-center py-2">{contact.name}</td>
                       <td className="text-center">{contact.email}</td>
                       <td className="text-center">{contact.status}</td>
                       <td className="text-center">{formatDate(contact.createdAt, 1)}</td>
                       <td className="text-center">
-                        {(contact.status === 'new') ? <i className="far fa-eye" onClick={setItemRead(contact['_id'])} title="Marcar como lida"></i> : '' }
-                        &nbsp;&nbsp;
-                        <i onClick={deleteItem()} className="far fa-window-close" title="Excluir"></i></td>
+                        <i onClick={() => deleteItem(contact._id)} className="far fa-window-close" title="Excluir"></i></td>
                     </tr>
                     <tr>
                       <td colSpan="5">
@@ -82,7 +88,7 @@ export const getServerSideProps = session(async ({req, res}) => {
     const results = await db
     .collection('contacts')
     .find({})
-    .sort({ metacritic: -1 })
+    .sort({ createdAd: -1 })
     .toArray();
 
     results.forEach(element => {
